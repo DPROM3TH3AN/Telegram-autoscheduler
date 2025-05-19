@@ -1,0 +1,53 @@
+.html
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Schedule New Message
+            </div>
+            <div class="card-body">
+                <form id="scheduleForm">
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Groups</label>
+                        <div id="groupsList">
+                            Loading groups...
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Schedule Time</label>
+                        <input type="datetime-local" class="form-control" id="scheduleTime" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Schedule Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Scheduled Messages
+            </div>
+            <div class="card-body">
+                <div id="messagesList">
+                    Loading messages...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Add JavaScript for form handling and API calls
+</script>
+{% endblock %}
